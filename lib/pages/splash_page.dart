@@ -29,15 +29,22 @@ class SplashPage extends ConsumerWidget {
         
         child: Text("Terms of Service.")) ,
         SizedBox(height:30,),
-          ElevatedButton(
-                        onPressed:(() {
-                          context.go("/home");
-                           }),
-                        child:Text("Agree and continue"),
-                        style: TextButton.styleFrom(
-                          minimumSize: Size(200,50)
-                        ),
-                      ), ],
+         InkWell(
+          onTap: () {
+           context.go("/login");
+          },
+           child: Container(
+                                  width: 250,
+                                  height: 50,
+                                  alignment: Alignment.center,
+                                  
+                                  child: Text('Agree and Continue',style:TextStyle (color:Colors.white,fontWeight:FontWeight.bold,fontSize: 22),
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 0, 124, 83),
+                                    borderRadius: BorderRadius.circular(5)
+           )),
+         ) ],
        
         ),
       ) ,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_messengerpro/pages/home_page.dart';
 import 'package:flutter_messengerpro/pages/splash_page.dart';
+import 'package:flutter_messengerpro/router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,14 +12,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'MessengerPro',
-      theme: ThemeData(
-       primaryColor: Color.fromARGB(255, 42, 43, 42),
-        accentColor: Color.fromARGB(255, 83, 83, 83),
-      ),
+    return MaterialApp.router(
+     
+      title: "MESSENGERPRO",
       debugShowCheckedModeBanner: false,
-      home:  SplashPage(),
+      
+  
+      theme: ThemeData(
+       primaryColor: Color.fromARGB(255, 42, 43, 42),    
+        
+      ),
+      
+      // debugShowCheckedModeBanner: false,
+       routeInformationParser: router.routeInformationParser,
+      routerDelegate:router.routerDelegate,
+      routeInformationProvider:router.routeInformationProvider,
     );
   }
 }

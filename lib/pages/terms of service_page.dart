@@ -9,7 +9,7 @@ class termsofservice extends StatelessWidget {
       
       body: SingleChildScrollView(
         child: Column(children: [                  Image.asset(
-                      "assets/images/lg.1.png",
+                      "assets/images/lg.2.png",
                       fit: BoxFit.fill,
           )],
         ))
